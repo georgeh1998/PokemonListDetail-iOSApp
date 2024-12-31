@@ -9,13 +9,16 @@ import SwiftUI
 
 
 struct PokemonGridList: View {
+    
+    @StateObject private var viewModel = PokemonListViewModel()
+    
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         ScrollView(.vertical) {
             LazyVGrid(columns: columns) {
-                ForEach(0...8, id: \.self) { value in
-                    PokemonListItem()
+                ForEach(viewModel.pokemonDataList,  id: \.self) { pokemonData in
+                    PokemonListItem(itemData: pokemonData)
                 }
             }
             

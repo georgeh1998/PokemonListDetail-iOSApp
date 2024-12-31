@@ -6,20 +6,35 @@
 //
 
 import SwiftUI
+import PokemonAPI
 
-
-struct PokemonListItemData {
+struct PokemonListItemData: Hashable {
+    var id: PokemonAPI.ID
+    var name: String
+    var imageUrl: String
     
+    init(id: PokemonAPI.ID, name: String, imageUrl: String) {
+        self.id = id
+        self.name = name
+        self.imageUrl = imageUrl
+    }
 }
 
 struct PokemonListItem: View {
+    
+    var itemData: PokemonListItemData
+    
+    init(itemData: PokemonListItemData) {
+        self.itemData = itemData
+    }
+    
     var body: some View {
         VStack {
             Image("SamplePokemon")
                 .resizable()
                 .scaledToFit()
             Text(
-                "Pikachu"
+                "\(itemData.name)"
             )
         }
         .padding(16)
@@ -31,5 +46,5 @@ struct PokemonListItem: View {
 
 
 #Preview {
-    PokemonListItem()
+    PokemonListItem(itemData: PokemonListItemData(id: PokemonAPI.ID(""), name: "hasegawa", imageUrl: "hasegawa"))
 }
