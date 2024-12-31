@@ -11,6 +11,7 @@
 		5EBDC0892D23B23500BF6CC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDC0882D23B23500BF6CC9 /* ContentView.swift */; };
 		5EBDC08B2D23B23600BF6CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBDC08A2D23B23600BF6CC9 /* Assets.xcassets */; };
 		5EBDC08E2D23B23600BF6CC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBDC08D2D23B23600BF6CC9 /* Preview Assets.xcassets */; };
+		5EBDC0952D23B3AF00BF6CC9 /* PokemonListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDC0942D23B3AF00BF6CC9 /* PokemonListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5EBDC0882D23B23500BF6CC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5EBDC08A2D23B23600BF6CC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EBDC08D2D23B23600BF6CC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5EBDC0942D23B3AF00BF6CC9 /* PokemonListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				5EBDC0862D23B23500BF6CC9 /* PokemonListDetail_iOSAppApp.swift */,
 				5EBDC0882D23B23500BF6CC9 /* ContentView.swift */,
+				5EBDC0942D23B3AF00BF6CC9 /* PokemonListItem.swift */,
 				5EBDC08A2D23B23600BF6CC9 /* Assets.xcassets */,
 				5EBDC08C2D23B23600BF6CC9 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EBDC0952D23B3AF00BF6CC9 /* PokemonListItem.swift in Sources */,
 				5EBDC0892D23B23500BF6CC9 /* ContentView.swift in Sources */,
 				5EBDC0872D23B23500BF6CC9 /* PokemonListDetail_iOSAppApp.swift in Sources */,
 			);
