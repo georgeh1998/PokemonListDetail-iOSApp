@@ -11,22 +11,37 @@ import SwiftUI
 struct PokemonGridList: View {
     
     @StateObject private var viewModel = PokemonListViewModel()
+    var click: (PokemonListItemData) -> ()
+
+    private var screenWidth: CGFloat = UIScreen.main.bounds.width
     
-    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    var columns: [GridItem] {
+        [GridItem(.fixed(screenWidth/2)), GridItem(.fixed(screenWidth/2))]
+    }
+    
+    init(click: @escaping (PokemonListItemData) -> Void) {
+        self.click = click
+    }
     
     var body: some View {
         ScrollView(.vertical) {
             LazyVGrid(columns: columns) {
-                ForEach(viewModel.pokemonDataList,  id: \.self) { pokemonData in
-                    PokemonListItem(itemData: pokemonData)
+                ForEach(viewModel.pokemonDataList) { pokemonData in
+                    PokemonListItem(
+                        itemData: pokemonData,
+                        width: (screenWidth/2)-32, 
+                        click: click
+                    )
                 }
             }
-            
         }
+        .navigationTitle("Pokemon List")
     }
 }
 
 
 #Preview {
-    PokemonGridList()
+    PokemonGridList(
+        click: { _ in }
+    )
 }

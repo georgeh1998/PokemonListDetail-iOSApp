@@ -21,6 +21,7 @@
 		5EBDC0A82D242DB400BF6CC9 /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 5EBDC0A72D242DB400BF6CC9 /* PokemonAPI */; };
 		5EBDC0AB2D242E7600BF6CC9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDC0AA2D242E7600BF6CC9 /* Network.swift */; };
 		5EBDC0AD2D24320900BF6CC9 /* PokemonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDC0AC2D24320900BF6CC9 /* PokemonListViewModel.swift */; };
+		5EBDC0AF2D24C70D00BF6CC9 /* PokemonDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDC0AE2D24C70D00BF6CC9 /* PokemonDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		5EBDC0A42D242D4F00BF6CC9 /* PokemonAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PokemonAPI; sourceTree = SOURCE_ROOT; };
 		5EBDC0AA2D242E7600BF6CC9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5EBDC0AC2D24320900BF6CC9 /* PokemonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListViewModel.swift; sourceTree = "<group>"; };
+		5EBDC0AE2D24C70D00BF6CC9 /* PokemonDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				5EBDC08A2D23B23600BF6CC9 /* Assets.xcassets */,
 				5EBDC09C2D242B1D00BF6CC9 /* graphql */,
 				5EBDC08C2D23B23600BF6CC9 /* Preview Content */,
+				5EBDC0AE2D24C70D00BF6CC9 /* PokemonDetailScreen.swift */,
 			);
 			path = "PokemonListDetail-iOSApp";
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EBDC0AB2D242E7600BF6CC9 /* Network.swift in Sources */,
+				5EBDC0AF2D24C70D00BF6CC9 /* PokemonDetailScreen.swift in Sources */,
 				5EBDC0952D23B3AF00BF6CC9 /* PokemonListItem.swift in Sources */,
 				5EBDC0892D23B23500BF6CC9 /* ContentView.swift in Sources */,
 				5EBDC0872D23B23500BF6CC9 /* PokemonListDetail_iOSAppApp.swift in Sources */,
