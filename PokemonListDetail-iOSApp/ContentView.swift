@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PokemonAPI
 
 struct ContentView: View {
     @State private var navigatePath: [String] = []
@@ -13,12 +14,11 @@ struct ContentView: View {
         NavigationStack(path: $navigatePath) {
             PokemonGridList(
                 click: { data in
-                    print(data.name)
-                    navigatePath.append(data.name)
+                    navigatePath.append(data.id)
                 }
             )
-            .navigationDestination(for: String.self) { name in
-                PokemonDetailScreen(name: name)
+            .navigationDestination(for: PokemonAPI.ID.self) { id in
+                PokemonDetailScreen(id: id)
             }
         }
     }
