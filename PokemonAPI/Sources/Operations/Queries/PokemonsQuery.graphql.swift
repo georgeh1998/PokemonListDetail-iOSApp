@@ -7,7 +7,7 @@ public class PokemonsQuery: GraphQLQuery {
   public static let operationName: String = "Pokemons"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query Pokemons { pokemons(first: 10) { __typename id name } }"#
+      #"query Pokemons { pokemons(first: 10) { __typename id name image } }"#
     ))
 
   public init() {}
@@ -35,12 +35,14 @@ public class PokemonsQuery: GraphQLQuery {
         .field("__typename", String.self),
         .field("id", PokemonAPI.ID.self),
         .field("name", String?.self),
+        .field("image", String?.self),
       ] }
 
       /// The ID of an object
       public var id: PokemonAPI.ID { __data["id"] }
       /// The name of this Pokémon
       public var name: String? { __data["name"] }
+      public var image: String? { __data["image"] }
     }
   }
 }

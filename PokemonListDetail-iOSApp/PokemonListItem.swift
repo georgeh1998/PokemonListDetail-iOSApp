@@ -30,9 +30,13 @@ struct PokemonListItem: View {
     
     var body: some View {
         VStack {
-            Image("SamplePokemon")
-                .resizable()
-                .scaledToFit()
+            let url = URL(string: itemData.imageUrl)
+            AsyncImage(url: url) { result in
+                result.image?
+                    .resizable()
+                    .scaledToFill()
+            }
+            .aspectRatio(1.0, contentMode: .fit)
             Text(
                 "\(itemData.name)"
             )

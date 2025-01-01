@@ -42,7 +42,7 @@ extension PokemonsQuery.Data.Pokemon {
         return PokemonListItemData(
             id: self.id,
             name: self.name ?? "",
-            imageUrl: self.name ?? ""
+            imageUrl: self.image ?? ""
         )
     }
     

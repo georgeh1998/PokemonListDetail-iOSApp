@@ -2,5 +2,6 @@ query Pokemons {
   pokemons(first: 10) {
     id
     name
+    image
   }
 }
