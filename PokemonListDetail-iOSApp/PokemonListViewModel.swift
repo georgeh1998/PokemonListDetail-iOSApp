@@ -15,7 +15,7 @@ class PokemonListViewModel: ObservableObject {
     
     init() {
         // TODO (Section 13 - https://www.apollographql.com/docs/ios/tutorial/tutorial-subscriptions#use-your-subscription)
-        Network.shared.apollo.fetch(query: PokemonsQuery()) { [weak self] result in
+        Network.shared.apollo.fetch(query: PokemonsQuery(first: 180)) { [weak self] result in
             guard let self = self else {
                  return
              }

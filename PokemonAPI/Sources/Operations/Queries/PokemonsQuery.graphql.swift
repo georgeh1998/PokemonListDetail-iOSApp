@@ -7,10 +7,16 @@ public class PokemonsQuery: GraphQLQuery {
   public static let operationName: String = "Pokemons"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query Pokemons { pokemons(first: 10) { __typename id name image } }"#
+      #"query Pokemons($first: Int!) { pokemons(first: $first) { __typename id name image } }"#
     ))
 
-  public init() {}
+  public var first: Int
+
+  public init(first: Int) {
+    self.first = first
+  }
+
+  public var __variables: Variables? { ["first": first] }
 
   public struct Data: PokemonAPI.SelectionSet {
     public let __data: DataDict
@@ -18,7 +24,7 @@ public class PokemonsQuery: GraphQLQuery {
 
     public static var __parentType: any ApolloAPI.ParentType { PokemonAPI.Objects.Query }
     public static var __selections: [ApolloAPI.Selection] { [
-      .field("pokemons", [Pokemon?]?.self, arguments: ["first": 10]),
+      .field("pokemons", [Pokemon?]?.self, arguments: ["first": .variable("first")]),
     ] }
 
     public var pokemons: [Pokemon?]? { __data["pokemons"] }

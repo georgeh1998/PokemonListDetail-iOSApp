@@ -32,9 +32,15 @@ struct PokemonDetailScreen: View {
                 }
                 Text(data.name)
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Text(data.number)
+                }
+            }
         }
     }
 }
+
 
 struct PokemonDetailData: Identifiable {
     var id: PokemonAPI.ID
